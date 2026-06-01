@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T2 Despachante | Campo Grande - MS</title>
+  <style>
+    :root {
+      --amarelo: #FFCC00;
+      --preto: #0F0F0F;
+      --cinza: #1A1A1A;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html {
+      scroll-behavior: smooth; /* Rolagem suave */
+    }
+    
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    header {
+      background: var(--preto);
+      color: white;
+      padding: 1.2rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    
+    .logo {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: var(--amarelo);
+      letter-spacing: -1px;
+    }
+    
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                  url('https://images.unsplash.com/photo-1558618666-fcd25c85ee64?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+    
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      opacity: 0.95;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 16px 36px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      margin: 10px;
+      transition: all 0.4s ease;
+      border: none;
+    }
+    
+    .btn-amarelo {
+      background: var(--amarelo);
+      color: black;
+    }
+    
+    .btn-amarelo:hover {
+      background: #ffe033;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 204, 0, 0.4);
+    }
+    
+    .btn-verde {
+      background: #34A853;
+      color: white;
+    }
+    
+    .btn-verde:hover {
+      background: #2e8b47;
+      transform: translateY(-5px);
+    }
+    
+    .btn-ligar {
+      background: #e63939;
+      color: white;
+    }
+    
+    .btn-ligar:hover {
+      background: #d62828;
+      transform: translateY(-5px);
+    }
+    
+    section {
+      padding: 100px 20px;
+    }
+    
+    .servicos {
+      background: #f8f8f8;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 60px;
+      color: var(--preto);
+    }
+    
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .card {
+      background: white;
+      padding: 35px 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    
+    .card h3 {
+      color: var(--preto);
+      margin: 20px 0 15px;
+      font-size: 1.5rem;
+    }
+    
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      z-index: 9999;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    
+    footer {
+      background: var(--preto);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">T2 Despachante</div>
+      <div>
+        <a href="#servicos" style="color:white; margin:0 18px; text-decoration:none; font-weight:500;">Serviços</a>
+        <a href="#contato" style="color:white; margin:0 18px; text-decoration:none; font-weight:500;">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>T2 Despachante</h1>
+      <p>Agilidade, transparência e confiança na regularização do seu veículo em Campo Grande - MS</p>
+      
+      <div>
+        <a href="https://wa.me/5567993393509" class="btn btn-amarelo" target="_blank">Falar no WhatsApp</a>
+        <a href="tel:5567993393509" class="btn btn-ligar">📞 Ligar Agora</a>
+        <a href="https://www.google.com/search?q=T2+DESPACHANTE+Coment%C3%A1rios" 
+           class="btn btn-verde" target="_blank">
+          ⭐ Deixe seu Feedback
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="servicos">
+    <div class="container">
+      <h2>Nossos Serviços</h2>
+      <div class="cards">
+        <div class="card"><h3>Licenciamento</h3><p>Renovação anual completa</p></div>
+        <div class="card"><h3>1º Emplacamento</h3><p>Veículos novos</p></div>
+        <div class="card"><h3>2ª Via CRV</h3><p>Segunda via do documento</p></div>
+        <div class="card"><h3>Transferência</h3><p>Compra e venda de veículos</p></div>
+        <div class="card"><h3>IPVA</h3><p>Pagamento e parcelamento</p></div>
+        <div class="card"><h3>Reciclagem</h3><p>Baixa de veículo</p></div>
+        <div class="card"><h3>CNH</h3><p>Serviços relacionados</p></div>
+        <div class="card"><h3>Documentalista</h3><p>Todos os serviços Detran</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container" style="text-align:center;">
+      <h2>Entre em Contato</h2>
+      <p style="font-size:1.6rem; margin:30px 0;">
+        📍 Campo Grande, Mato Grosso do Sul
+      </p>
+      <a href="tel:5567993393509" style="font-size:2.2rem; color:#e63939; text-decoration:none; font-weight:bold;">
+        (67) 99339-3509
+      </a>
+      <p style="margin-top:15px; font-size:1.1rem;">Resposta rápida via WhatsApp ou ligação</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>T2 Despachante</strong> © 2026 - Todos os direitos reservados</p>
+    <p>Campo Grande • Mato Grosso do Sul</p>
+  </footer>
+
+  <!-- Botão WhatsApp Flutuante -->
+  <a href="https://wa.me/5567993393509" class="whatsapp-float" target="_blank">
+    💬
+  </a>
+
+</body>
+</html>
